@@ -6,6 +6,8 @@ jobs:
     steps:
       - name: FirstStep
         run: echo "Executing the first step"
+      - name: SecondStepThatUsesUses
+        uses: actions/setup-node@v4        
       - name: LastStep
         run: echo "Executing the Last step"
         

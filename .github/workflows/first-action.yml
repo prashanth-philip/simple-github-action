@@ -1,16 +1,12 @@
 name: Prashanth'sFirstWorkFlow
 #on: workflow_dispatch
+#on: push
 on: 
   push:
      paths:
        - 'src/**'
        - '.github/workflows/**'
        - '!docs/**'
-       
-       
-
-push:
-
 jobs:
   prashanthsfirstjob:
     runs-on: ubuntu-latest

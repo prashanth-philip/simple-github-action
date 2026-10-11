@@ -20,7 +20,7 @@ jobs:
         with:
           node-version: 24        
       - name: LastStepFirstJobWithOutput
-        run: echo "outputFromStep4J1=Executing the Last step in FirstJob"
+        run: echo "outputFromStep4J1=Executing the Last step in FirstJob"  >> $GITHUB_OUTPUT
         
   prashanthsSecondjobWithDepOnFirst:
     needs: prashanthsfirstjob

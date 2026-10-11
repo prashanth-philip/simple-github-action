@@ -1,6 +1,6 @@
 name: Prashanth'sFirstWorkFlow
 #on: workflow_dispatch
-#on: push
+#on: push  ###Single Line Push etc....
 on: 
   push:
      paths:

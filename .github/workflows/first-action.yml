@@ -5,8 +5,8 @@ jobs:
   prashanthsfirstjob:
     runs-on: ubuntu-latest
     steps:
-      - name: FirstStep
-        run: echo "Executing the first step"
+      - name: FirstStepDisplayingTriggerEvent
+        run: echo "Executing the first step ${{ github.event_name }}"
         
       - name: SecondStepThatUsesUses
         uses: actions/checkout@v4

@@ -5,7 +5,7 @@ jobs:
   prashanthsfirstjob:
     runs-on: ubuntu-latest
     outputs:
-      output1: ${{steps.LastStepFirstJobWithOutput.outputs.outputFromStep4J1}}
+      output1: ${{steps.ID_Of_DLastStepFirstJobWithOutput.outputs.outputFromStep4J1}}
     steps:
       - name: FirstStepDisplayingTriggerEvent
         run: |
@@ -20,6 +20,7 @@ jobs:
         with:
           node-version: 24        
       - name: LastStepFirstJobWithOutput
+        id: ID_Of_DLastStepFirstJobWithOutput
         run: echo "outputFromStep4J1=Executing the Last step in FirstJob"  >> $GITHUB_OUTPUT
         
   prashanthsSecondjobWithDepOnFirst:

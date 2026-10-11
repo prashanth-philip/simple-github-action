@@ -34,6 +34,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - run: echo "This is the output Exported from Job1 and pased to Job2 ${{ needs.prashanthsfirstjob.outputs.output1}}"
+      - run: echo "Just a dummy Change to see whether the pipeline will still execute with inclusion of /.git/workflows/* in the path for push"
   
       
   

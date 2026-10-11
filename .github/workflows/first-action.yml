@@ -1,12 +1,17 @@
 name: Prashanth'sFirstWorkFlow
-on: workflow_dispatch
+#on: workflow_dispatch
+on: push
 jobs:
   prashanthsfirstjob:
     runs-on: ubuntu-latest
     steps:
       - name: FirstStep
         run: echo "Executing the first step"
+        
       - name: SecondStepThatUsesUses
+        uses: actions/checkout@v4
+        
+      - name: ThirdStepThatUsesUses
         uses: actions/setup-node@v4
         with:
           node-version: 24        

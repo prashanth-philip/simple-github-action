@@ -4,6 +4,8 @@ on: push
 jobs:
   prashanthsfirstjob:
     runs-on: ubuntu-latest
+    outputs:
+      output1: ${{steps.LastStepFirstJobWithOutput.outputs.outputFromStep4J1}}
     steps:
       - name: FirstStepDisplayingTriggerEvent
         run: |
@@ -17,10 +19,15 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: 24        
-      - name: LastStep
-        run: echo "Executing the Last step"
+      - name: LastStepFirstJobWithOutput
+        run: echo "outputFromStep4J1=Executing the Last step in FirstJob"
         
-      
+  prashanthsSecondjobWithDepOnFirst:
+    needs: prashanthsfirstjob
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo 
+  
       
   
   

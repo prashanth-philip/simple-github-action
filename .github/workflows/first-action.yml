@@ -6,7 +6,9 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: FirstStepDisplayingTriggerEvent
-        run: echo "Executing the first step ${{ github.event_name }}"
+        run: |
+          echo "Executing the first step. This exection was trigged by ${{ github.event_name }}"
+          echo "The last commit message is: ${{ github.event.head_commit.message }}"
         
       - name: SecondStepThatUsesUses
         uses: actions/checkout@v4
